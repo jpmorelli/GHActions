@@ -1,14 +1,17 @@
 name: 'Hello World'
 description: 'Greet someone'
-inputs:
-  who-to-greet:  # id of input
-        description: 'Person to act with. Valid options: JP|Another stupid'
-        required: true
-        default: 'JP'
-        type: choice
-        options:
-        - JP
-        - Another stupid
+
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:  # id of input
+            description: 'Person to act with. Valid options: JP|Another stupid'
+            required: true
+            default: 'JP'
+            type: choice
+            options:
+            - JP
+            - Another stupid
 outputs:
   random-number:
     description: "Random number"
