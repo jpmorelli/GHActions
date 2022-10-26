@@ -1,4 +1,14 @@
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:  # id of input
+            description: 'Person to act with. Valid options: JP|Another stupid'
+            required: true
+            default: 'JP'
+            type: choice
+            options:
+            - JP
+            - Another stupid
 
 jobs:
   hello_world_job:
