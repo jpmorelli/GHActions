@@ -1,5 +1,7 @@
 name: cache-dependencies
 
+on: [push]
+
 jobs:
   example-job:
     steps:
